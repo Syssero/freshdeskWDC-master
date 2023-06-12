@@ -118,7 +118,7 @@
             dataType: tableau.dataTypeEnum.datetime
         }, {
             id: "syssero_internal_only_client_name",
-            alias: "syssero_internal_only_client_name",
+            alias: "syssero_internal_only_project_name",
             dataType: tableau.dataTypeEnum.string
         },];
 
