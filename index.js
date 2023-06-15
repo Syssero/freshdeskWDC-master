@@ -117,8 +117,16 @@
             alias: "pending_since",
             dataType: tableau.dataTypeEnum.datetime
         }, {
-            id: "syssero_internal_only_client_name",
+            id: "syssero_internal_only_project_name",
             alias: "syssero_internal_only_project_name",
+            dataType: tableau.dataTypeEnum.string
+        }, {
+            id: "details",
+            alias: "details",
+            dataType: tableau.dataTypeEnum.string
+        }, {
+            id: "request_type",
+            alias: "request_type",
             dataType: tableau.dataTypeEnum.string
         },];
 
@@ -194,7 +202,9 @@
                             "resolved_at": response[i].stats.resolved_at == null ? moment('1800-01-01').format(dateFormat) : moment(response[i].stats.resolved_at).format(dateFormat),
                             "closed_at": response[i].stats.closed_at == null ? moment('1800-01-01').format(dateFormat) : moment(response[i].stats.closed_at).format(dateFormat),
                             "pending_since": response[i].stats.pending_since == null ? moment('1800-01-01').format(dateFormat) : moment(response[i].stats.pending_since).format(dateFormat),
-							"syssero_internal_only_client_name": (response[i].custom_fields.cf_syssero_internal_only_client_name == null ? 'Empty' : response[i].custom_fields.cf_syssero_internal_only_client_name)
+							"syssero_internal_only_project_name": (response[i].custom_fields.cf_syssero_internal_only_client_name == null ? 'Empty' : response[i].custom_fields.cf_syssero_internal_only_client_name)
+							"details": (response[i].custom_fields.cf_details == null ? 'Empty' : response[i].custom_fields.cf_details)
+							"request_type": (response[i].custom_fields.cf_request_type == null ? 'Empty' : response[i].custom_fields.cf_request_type)
                         });
                     }
 
