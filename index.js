@@ -202,8 +202,8 @@
                             "resolved_at": response[i].stats.resolved_at == null ? moment('1800-01-01').format(dateFormat) : moment(response[i].stats.resolved_at).format(dateFormat),
                             "closed_at": response[i].stats.closed_at == null ? moment('1800-01-01').format(dateFormat) : moment(response[i].stats.closed_at).format(dateFormat),
                             "pending_since": response[i].stats.pending_since == null ? moment('1800-01-01').format(dateFormat) : moment(response[i].stats.pending_since).format(dateFormat),
-							"syssero_internal_only_project_name": (response[i].custom_fields.cf_syssero_internal_only_client_name == null ? 'Empty' : response[i].custom_fields.cf_syssero_internal_only_client_name)
-							"details": (response[i].custom_fields.cf_details == null ? 'Empty' : response[i].custom_fields.cf_details)
+							"syssero_internal_only_project_name": (response[i].custom_fields.cf_syssero_internal_only_client_name == null ? 'Empty' : response[i].custom_fields.cf_syssero_internal_only_client_name),
+							"details": (response[i].custom_fields.cf_details == null ? 'Empty' : response[i].custom_fields.cf_details),
 							"request_type": (response[i].custom_fields.cf_request_type == null ? 'Empty' : response[i].custom_fields.cf_request_type)
                         });
                     }
