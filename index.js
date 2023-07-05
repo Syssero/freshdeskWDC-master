@@ -285,6 +285,7 @@
 							"internal_group_id": response[i].internal_group_id,
 							"next_response_due_by": response[i].nr_due_by == null ? moment('1800-01-01').format(dateFormat) : moment(response[i].nr_due_by).format(dateFormat),
 							"next_response_escalated": response[i].nr_escalated
+							
                         });
                     }
 
